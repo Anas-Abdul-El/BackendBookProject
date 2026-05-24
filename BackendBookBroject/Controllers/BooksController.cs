@@ -54,6 +54,55 @@ namespace BackendBookBroject.Controllers
             }
         }
 
-       
+        [HttpPut]
+        public async Task<IActionResult> updateUser([FromBody] Book book)
+        {
+            if (book == null)
+            {
+                return BadRequest("Book is null");
+            }
+
+            var existingUser = await _context.Books.FindAsync(book.bookId);
+            if (existingUser == null)
+            {
+                return NotFound("Book Not Found");
+            }
+            _context.Books.Update(book);
+            try
+            {
+                await _context.SaveChangesAsync();
+                return Ok(book);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> DeleteUser([FromBody] Book book)
+        {
+            if (book == null)
+            {
+                return BadRequest("Book is null");
+            }
+
+            var existingUser = await _context.Books.FindAsync(book.bookId);
+            if (existingUser == null)
+            {
+                
+                return NotFound("Book Not Found");
+            }
+            _context.Books.Remove(book);
+            try
+            {
+                await _context.SaveChangesAsync();
+                return Ok(book);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
     }
 }
