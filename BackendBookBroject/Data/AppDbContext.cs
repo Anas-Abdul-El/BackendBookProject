@@ -9,7 +9,7 @@ namespace BackendBookBroject.Data
         {
 
         }
-        public DbSet<Book> Users { get; set; }
+        public DbSet<Book> Books { get; set; }
     }
 }
 
