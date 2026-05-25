@@ -158,3 +158,4 @@ C:\Users\ansab\source\repos\BackendBookBroject\BackendBookBroject\bin\Debug\net1
 C:\Users\ansab\source\repos\BackendBookBroject\BackendBookBroject\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 C:\Users\ansab\source\repos\BackendBookBroject\BackendBookBroject\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 C:\Users\ansab\source\repos\BackendBookBroject\BackendBookBroject\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\ansab\source\repos\BackendBookBroject\BackendBookBroject\obj\Debug\net10.0\BackendBookBroject.sourcelink.json

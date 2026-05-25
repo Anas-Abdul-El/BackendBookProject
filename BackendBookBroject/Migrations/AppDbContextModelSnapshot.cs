@@ -23,29 +23,29 @@ namespace BackendBookBroject.Migrations
 
             modelBuilder.Entity("BackendBookBroject.model.Book", b =>
                 {
-                    b.Property<int>("bookId")
+                    b.Property<int>("BookId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("bookId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BookId"));
 
-                    b.Property<string>("author")
+                    b.Property<string>("Author")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("isBarrowed")
+                    b.Property<bool>("IsBarrowed")
                         .HasColumnType("bit");
 
-                    b.Property<int>("quantity")
+                    b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.Property<string>("title")
+                    b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("bookId");
+                    b.HasKey("BookId");
 
-                    b.ToTable("Users");
+                    b.ToTable("Books");
                 });
 #pragma warning restore 612, 618
         }

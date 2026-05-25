@@ -5,14 +5,14 @@ namespace BackendBookBroject.model
     public class Book
     {
         [Key]
-        public int bookId { get; set; }
+        public int BookId { get; set; }
         [Required]
-        public string title { get; set; }
+        public string Title { get; set; } = string.Empty;
         [Required]
-        public string author { get; set; }
+        public string Author { get; set; } = string.Empty;
         [Required]
-        public int quantity { get; set; }
+        public int Quantity { get; set; }
 
-        public bool isBarrowed { get; set; } = false;
+        public bool IsBarrowed { get; set; } = false;
     }
 }

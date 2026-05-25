@@ -62,7 +62,7 @@ namespace BackendBookBroject.Controllers
                 return BadRequest("Book is null");
             }
 
-            var existingUser = await _context.Books.FindAsync(book.bookId);
+            var existingUser = await _context.Books.FindAsync(book.BookId);
             if (existingUser == null)
             {
                 return NotFound("Book Not Found");
@@ -87,7 +87,7 @@ namespace BackendBookBroject.Controllers
                 return BadRequest("Book is null");
             }
 
-            var existingUser = await _context.Books.FindAsync(book.bookId);
+            var existingUser = await _context.Books.FindAsync(book.BookId);
             if (existingUser == null)
             {
                 
