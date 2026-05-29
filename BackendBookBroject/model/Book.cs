@@ -11,8 +11,9 @@ namespace BackendBookBroject.model
         [Required]
         public string Author { get; set; } = string.Empty;
         [Required]
+        public string Isbn { get; set; } = string.Empty;
+        [Required]
         public int Quantity { get; set; }
-
-        public bool IsBarrowed { get; set; } = false;
+        public bool IsBorrowed { get; set; } = false;
     }
 }
