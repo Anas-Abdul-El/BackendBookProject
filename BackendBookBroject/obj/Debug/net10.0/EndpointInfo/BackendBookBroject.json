@@ -54,36 +54,6 @@
           }
         }
       },
-      "put": {
-        "tags": [
-          "Books"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Book"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Book"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Book"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
       "delete": {
         "tags": [
           "Books"
@@ -140,6 +110,46 @@
             "description": "OK"
           }
         }
+      },
+      "put": {
+        "tags": [
+          "Books"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Book"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Book"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Book"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     }
   },
@@ -149,6 +159,7 @@
         "required": [
           "title",
           "author",
+          "isbn",
           "quantity"
         ],
         "type": "object",
@@ -167,6 +178,9 @@
           "author": {
             "type": "string"
           },
+          "isbn": {
+            "type": "string"
+          },
           "quantity": {
             "pattern": "^-?(?:0|[1-9]\\d*)$",
             "type": [
@@ -175,7 +189,7 @@
             ],
             "format": "int32"
           },
-          "isBarrowed": {
+          "isBorrowed": {
             "type": "boolean"
           }
         }

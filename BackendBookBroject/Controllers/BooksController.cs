@@ -54,7 +54,7 @@ namespace BackendBookBroject.Controllers
             }
         }
 
-        [HttpPut]
+        [HttpPut("{id}")]
         public async Task<IActionResult> updateUser([FromBody] Book book)
         {
             if (book == null)
@@ -67,7 +67,12 @@ namespace BackendBookBroject.Controllers
             {
                 return NotFound("Book Not Found");
             }
-            _context.Books.Update(book);
+            //_context.Books.Update(book);
+            existingUser.Title = book.Title;
+            existingUser.Author = book.Author;
+            existingUser.Quantity = book.Quantity;
+            existingUser.Isbn = book.Isbn;
+            existingUser.IsBorrowed = book.IsBorrowed;
             try
             {
                 await _context.SaveChangesAsync();

@@ -27,22 +27,6 @@
   },
   {
     "ContainingType": "BackendBookBroject.Controllers.BooksController",
-    "Method": "updateUser",
-    "RelativePath": "api/Books",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "book",
-        "Type": "BackendBookBroject.model.Book",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "BackendBookBroject.Controllers.BooksController",
     "Method": "DeleteUser",
     "RelativePath": "api/Books",
     "HttpMethod": "DELETE",
@@ -68,6 +52,27 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackendBookBroject.Controllers.BooksController",
+    "Method": "updateUser",
+    "RelativePath": "api/Books/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "book",
+        "Type": "BackendBookBroject.model.Book",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "",
         "IsRequired": true
       }
     ],
