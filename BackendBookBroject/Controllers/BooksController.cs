@@ -84,25 +84,21 @@ namespace BackendBookBroject.Controllers
             }
         }
 
-        [HttpDelete]
-        public async Task<IActionResult> DeleteUser([FromBody] Book book)
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteUser(int id)
         {
-            if (book == null)
-            {
-                return BadRequest("Book is null");
-            }
 
-            var existingUser = await _context.Books.FindAsync(book.BookId);
-            if (existingUser == null)
+            var existingBook = await _context.Books.FindAsync(id);
+            if (existingBook == null)
             {
                 
                 return NotFound("Book Not Found");
             }
-            _context.Books.Remove(book);
+            _context.Books.Remove(existingBook);
             try
             {
                 await _context.SaveChangesAsync();
-                return Ok(book);
+                return Ok(existingBook);
             }
             catch (Exception ex)
             {

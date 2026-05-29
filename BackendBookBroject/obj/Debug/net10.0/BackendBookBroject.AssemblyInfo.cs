@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BackendBookBroject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+796a14b3b5d22d47aed2c7b93a360e6432082efe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a60a8ef6485bf63000d077f89749f1d5ae937f2f")]
 [assembly: System.Reflection.AssemblyProductAttribute("BackendBookBroject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BackendBookBroject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
