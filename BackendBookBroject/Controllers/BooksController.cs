@@ -28,17 +28,6 @@ namespace BackendBookBroject.Controllers
             return Ok(books);
         }
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetUserById(int id)
-        {
-            var book = await _context.Books.FindAsync(id);
-            if (book == null)
-            {
-                return NotFound();
-            }
-            return Ok(book);
-        }
-
         [HttpPost]
         public async Task<IActionResult> CreateUser([FromBody] Book book)
         {
