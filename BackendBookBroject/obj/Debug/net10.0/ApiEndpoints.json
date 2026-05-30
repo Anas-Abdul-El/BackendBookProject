@@ -27,22 +27,6 @@
   },
   {
     "ContainingType": "BackendBookBroject.Controllers.BooksController",
-    "Method": "GetUserById",
-    "RelativePath": "api/Books/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "BackendBookBroject.Controllers.BooksController",
     "Method": "updateUser",
     "RelativePath": "api/Books/{id}",
     "HttpMethod": "PUT",
